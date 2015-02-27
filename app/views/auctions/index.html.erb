@@ -1,0 +1,11 @@
+<h1> All the auctions </h1>
+
+<% @auction.each do |a| %>
+
+<%= link_to a.title, a %>
+<%= a.description %>
+<%= a.reserve %>
+<%= a.end_date %>
+<br>
+
+<% end %>

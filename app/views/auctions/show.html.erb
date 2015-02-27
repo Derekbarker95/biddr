@@ -1,0 +1,13 @@
+<h1> Show Auction </h1>
+<%= @auction.title %>
+<%= @auction.description %>
+<%= @auction.reserve %>
+<%= @auction.end_date %>
+
+<div class="bidform">
+ <% render partial: "/bids/form" %>
+</div>
+
+<% @auction.bids.each do |bids| %>
+    <%= render partial: "/bids/bid", locals: {bid: bid} %>
+  <% end %>
